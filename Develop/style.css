@@ -1,10 +1,12 @@
+/* Applied */
 body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
 }
 
-textarea{
+/* Applied */
+textarea {
   background: transparent;
   border: none;
   resize: none;
@@ -13,6 +15,7 @@ textarea{
   padding: 10px;
 }
 
+/* Applied */
 .jumbotron {
   text-align: center;
   background-color: transparent;
@@ -21,21 +24,26 @@ textarea{
   border-bottom: 10px solid black;
 }
 
+/* Applied - But is this correct spot?*/
 .description{
   white-space: pre-wrap;
 }
 
+/* Applied */
 .time-block{
   text-align: center;
   border-radius: 15px;
+  width: 100%;
 }
 
+/* Applied */
 .row {
   white-space: pre-wrap;
   height: 80px;
-  border-top: 1px solid white;;
+  border-top: 1px solid white;
 }
 
+/* Applied */
 .hour {
   background-color: #ffffff;
   color: #000000;
@@ -57,6 +65,7 @@ textarea{
   color: white;
 }
 
+/* Will not apply ??? */
 .saveBtn {
   border-left: 1px solid black;
   border-top-right-radius: 15px;
@@ -65,6 +74,7 @@ textarea{
   color: white;
 }
 
+/* How do I apply? */
 .saveBtn i:hover {
   font-size: 20px;
   transition: all .3s ease-in-out;
