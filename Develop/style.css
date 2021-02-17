@@ -15,6 +15,19 @@ textarea {
   padding: 10px;
 }
 
+/* Applied? */
+.full-page {
+  background-color: brown;
+  min-Height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(../Assets/Landscape.jpg); background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  border: none;
+}
+
 /* Applied */
 .jumbotron {
   text-align: center;
@@ -80,7 +93,7 @@ textarea {
 
 /* How do I apply? */
 .saveBtn i:hover {
-  font-size: 20px;
+  font-size: 25px;
   transition: all .3s ease-in-out;
 }
 

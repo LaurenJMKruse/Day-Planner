@@ -4,8 +4,9 @@ $(document).ready(function() {
 
     // *************************************************
     // II. Global variables
-    let calendarSpace = $('.container');
-    
+    const fullPage = $('body');
+    fullPage.addClass('full-page');
+    const calendarSpace = $('.container');
 
     // *************************************************
     // III. Array
@@ -34,7 +35,7 @@ $(document).ready(function() {
 
                 let imageSpace = $('<div>');
                 imageSpace.css({position: 'absolute', zIndex: '2', maxWidth: '100%', height: 'auto', overflow: 'hidden'});
-                let imagePlaceholder = $('<img>').attr({src: '../Assets/Great-Wave-Transparent.jpg', alt: 'Great Wave Japanese Woodblock Print'}).css({maxWidth: '100%', height: 'auto', overflow: 'hidden'});
+                let imagePlaceholder = $('<img>').attr({src: '../Assets/Ducks-And-Lotus-30Transparency.jpg', alt: 'Chinese Painting of Ducks and Lotus Flowers'}).css({maxWidth: '100%', height: 'auto', overflow: 'hidden'});
                 imageSpace.append(imagePlaceholder);
                 calendarPlaceholder.append(imageSpace);
                 
