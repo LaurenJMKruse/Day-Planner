@@ -5,10 +5,10 @@ $(document).ready(function() {
     // *************************************************
     // II. Global variables
     let calendarSpace = $('.container');
+    
 
     // *************************************************
     // III. Array
-
     let hoursArray = ['8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18'];
 
     // *************************************************
@@ -21,46 +21,56 @@ $(document).ready(function() {
         // A. Begin or refresh application
         function initializePlanner() {
             let personalizedHeader = $('.display-3');
-            let userName = prompt('Please enter your name (up to 12 characters): ');
+            let userName = 'Arabella'; //prompt('Please enter your name (up to 12 characters): ');
             personalizedHeader.text(`${userName}'s Day Planner`);
             buildTimeBlocks();
         };
 
         function buildTimeBlocks() {
-            alert('Creating time blocks!');
+            console.log('Creating time blocks!');
+                calendarSpace.css('padding', '0');
+                let calendarPlaceholder = $('<div>').addClass('schedule-details');
+                calendarSpace.append(calendarPlaceholder);
+
+                let imageSpace = $('<div>');
+                imageSpace.css({position: 'absolute', zIndex: '2', maxWidth: '100%', height: 'auto', overflow: 'hidden'});
+                let imagePlaceholder = $('<img>').attr({src: '../Assets/Great-Wave-Transparent.jpg', alt: 'Great Wave Japanese Woodblock Print'}).css({maxWidth: '100%', height: 'auto', overflow: 'hidden'});
+                imageSpace.append(imagePlaceholder);
+                calendarPlaceholder.append(imageSpace);
+                
+                let schedulePlaceholder = $('<div>').addClass('hour-details').css({position: 'relative', zIndex: '2'});
+                calendarPlaceholder.append(schedulePlaceholder);
+
             $.each(hoursArray, function (index, hourNumber)
             {
                 let hourBeingBuilt = hourNumber;
-                console.log('The hour being built is ' + hourBeingBuilt + ':00');
+                let hourSequence = index;
+                console.log('Hour number ' + hourSequence + ' is ' + hourBeingBuilt + ':00');
 
                 let timeBlock = $('<div>');
                 timeBlock.addClass('time-block row');
-                calendarSpace.append(timeBlock);
+                schedulePlaceholder.append(timeBlock);
                 
                 let hourColumn = $('<div>');
-                hourColumn.addClass('row');
                 hourColumn.css('width', '10%');
+                hourColumn.css('margin-bottom', '0');
                 let hourPlaceholder = $('<p>');
-                hourPlaceholder.addClass('hour').val(hourNumber).css('width', '100%');
-                console.log('The value of this hour is ' + hourNumber);
-                hourPlaceholder.text(hourNumber + ':00');
+                hourPlaceholder.addClass('hour').val(hourNumber).text(hourNumber + ':00');
                 hourColumn.append(hourPlaceholder);
                 timeBlock.append(hourColumn);
+                console.log('The value of this hour is ' + hourNumber);
 
                 let descriptionColumn = $('<div>');
-                //descriptionColumn.add(textArea);
-                descriptionColumn.addClass('row');
                 descriptionColumn.css('width', '80%');
                 let descriptionPlaceholder = $('<textarea>');
-                descriptionPlaceholder.addClass('description').text('Event description goes here').css('width', '100%');
+                descriptionPlaceholder.addClass('description');
                 descriptionColumn.append(descriptionPlaceholder);
                 timeBlock.append(descriptionColumn);
 
                 let buttonColumn = $('<div>');
-                buttonColumn.addClass('row');
                 buttonColumn.css('width', '10%');
                 let saveButton = $('<button>');
-                saveButton.addClass('btn saveBtn').css('width', '100%');
+                saveButton.addClass('saveBtn fa fa-save i:hover');
                 buttonColumn.append(saveButton);              
                 timeBlock.append(buttonColumn);
                 

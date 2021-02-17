@@ -24,14 +24,20 @@ textarea {
   border-bottom: 10px solid black;
 }
 
-/* Applied - But is this correct spot?*/
-.description{
-  white-space: pre-wrap;
+/* Image Placeholder */
+.schedule-details {
+  border: none;
+  margin: 0;
+  width: 100%;
+  padding: 0;
 }
+
+/**************************
+/* Time Block
 
 /* Applied */
 .time-block{
-  text-align: center;
+  text-align: left;
   border-radius: 15px;
   width: 100%;
 }
@@ -40,15 +46,45 @@ textarea {
 .row {
   white-space: pre-wrap;
   height: 80px;
+  width: 100%;
   border-top: 1px solid white;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* Applied */
 .hour {
-  background-color: #ffffff;
   color: #000000;
   border-top: 1px dashed #000000;
+  width: 100%;
+  margin-bottom: 0px;
+  padding-left: 5px;
+  padding-top: 10px;
 }
+
+/* Applied */
+.description{
+  white-space: pre-wrap;
+  width: 100%;
+  height: 70px;
+}
+
+/* Will not apply ??? */
+.saveBtn {
+  border: none;
+  background-color: transparent;
+  color: black;
+  height: 80px;
+  width: 100%;
+}
+
+/* How do I apply? */
+.saveBtn i:hover {
+  font-size: 20px;
+  transition: all .3s ease-in-out;
+}
+
+
 
 .past {
   background-color: #d3d3d3;
@@ -65,17 +101,4 @@ textarea {
   color: white;
 }
 
-/* Will not apply ??? */
-.saveBtn {
-  border-left: 1px solid black;
-  border-top-right-radius: 15px;
-  border-bottom-right-radius: 15px;
-  background-color: #06AED5;
-  color: white;
-}
 
-/* How do I apply? */
-.saveBtn i:hover {
-  font-size: 20px;
-  transition: all .3s ease-in-out;
-}
