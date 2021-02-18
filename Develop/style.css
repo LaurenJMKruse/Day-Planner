@@ -1,0 +1,128 @@
+/* Applied */
+body {
+  font-family: 'Eagle Lake', cursive;  
+  font-size: 16px;
+  line-height: 1;
+}
+
+/* Applied */
+textarea {
+  background: transparent;
+  resize: none;
+  border: none;
+  outline: none;
+  color: #000000;
+  padding: 10px;
+}
+
+/* Applied? */
+.full-page {
+  background-color: brown;
+  min-Height: 100%;
+  margin: 0;
+  padding: 0;
+  background-image: url(../Assets/Spring-Play.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: fixed;
+  border: none;
+}
+
+/* Applied */
+.jumbotron {
+  text-align: center;
+  background-color: transparent;
+  font-family: 'Meddon', cursive;
+  color: black;
+  border-radius: 0;
+  padding-bottom: 20px;
+  border-bottom: 10px solid black;
+}
+
+/* Image Placeholder */
+.schedule-details {
+  border: none;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
+  padding: 0;
+}
+
+/**************************
+/* Time Block
+
+/* Applied */
+.time-block{
+  text-align: left;
+  width: 100%;
+}
+
+/* Applied */
+.row {
+  white-space: pre-wrap;
+  height: 80px;
+  width: 100%;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 10px solid black;
+  border-right: none;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: rgba(121, 90, 59, 0.6);
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Applied */
+.hour {
+  color: #000000;
+  width: 100%;
+  margin-bottom: 0px;
+  padding-left: 20px;
+  padding-top: 20px;
+}
+
+/* Applied */
+.description{
+  white-space: pre-wrap;
+  width: 100%;
+  height: 70px;
+}
+
+/* Will not apply ??? */
+.saveBtn {
+  border: none;
+  background-color: transparent;
+  font-size: 30px;
+  color: black;
+  height: 80px;
+  width: 100%;
+}
+
+/* How do I apply? */
+.saveBtn i:hover {
+  font-size: 25px;
+  transition: all .3s ease-in-out;
+}
+
+
+
+.past {
+  background-color: #d3d3d3;
+  color: white;
+}
+
+.present {
+  background-color: #ff6961;
+  color: white;
+}
+
+.future {
+  background-color: #77dd77;
+  color: white;
+}
+
+
