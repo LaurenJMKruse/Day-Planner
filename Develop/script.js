@@ -7,6 +7,15 @@ $(document).ready(function() {
     const fullPage = $('body');
     fullPage.addClass('full-page');
     const calendarSpace = $('.container');
+    let dayName = moment().day(String);
+    let monthName = moment().month(String);
+    let currentDay = moment().date(Number);
+    let year = moment().year(Number);
+    let datePlaceholder = $('#currentDay');
+    datePlaceholder.css({marginTop: '50px', fontFamily: 'Eagle Lake', fontSize: '30px'}).text('Thursday, 18 February 2021');
+    console.log(dayName);
+    // datePlaceholder.text(`${dayName}, ${currentDay} ${monthName} ${year}`);
+    let userName = '';
 
     // *************************************************
     // III. Array
@@ -21,9 +30,16 @@ $(document).ready(function() {
 
         // A. Begin or refresh application
         function initializePlanner() {
+            userName = 'Suzette';
             let personalizedHeader = $('.display-3');
-            let userName = 'Arabella'; //prompt('Please enter your name (up to 12 characters): ');
-            personalizedHeader.text(`${userName}'s Day Planner`);
+            if (userName === '') {
+                personalizedHeader.text('Day Planner');
+            } else {
+                personalizedHeader.text(`${userName}'s Day Planner`);
+            }
+            // let userName = ''; //prompt('Please enter your name (up to 12 characters): ');
+            
+            
             buildTimeBlocks();
         };
 
@@ -33,13 +49,7 @@ $(document).ready(function() {
                 let calendarPlaceholder = $('<div>').addClass('schedule-details');
                 calendarSpace.append(calendarPlaceholder);
 
-                let imageSpace = $('<div>');
-                imageSpace.css({position: 'absolute', zIndex: '2', maxWidth: '100%', height: 'auto', overflow: 'hidden'});
-                let imagePlaceholder = $('<img>').attr({src: '../Assets/Ducks-And-Lotus-30Transparency.jpg', alt: 'Chinese Painting of Ducks and Lotus Flowers'}).css({maxWidth: '100%', height: 'auto', overflow: 'hidden'});
-                imageSpace.append(imagePlaceholder);
-                calendarPlaceholder.append(imageSpace);
-                
-                let schedulePlaceholder = $('<div>').addClass('hour-details').css({position: 'relative', zIndex: '2'});
+                let schedulePlaceholder = $('<div>').addClass('hour-details');
                 calendarPlaceholder.append(schedulePlaceholder);
 
             $.each(hoursArray, function (index, hourNumber)
@@ -53,8 +63,8 @@ $(document).ready(function() {
                 schedulePlaceholder.append(timeBlock);
                 
                 let hourColumn = $('<div>');
-                hourColumn.css('width', '10%');
-                hourColumn.css('margin-bottom', '0');
+                hourColumn.css('width', '15%');
+                hourColumn.css('marginBottom', '0');
                 let hourPlaceholder = $('<p>');
                 hourPlaceholder.addClass('hour').val(hourNumber).text(hourNumber + ':00');
                 hourColumn.append(hourPlaceholder);
@@ -62,7 +72,7 @@ $(document).ready(function() {
                 console.log('The value of this hour is ' + hourNumber);
 
                 let descriptionColumn = $('<div>');
-                descriptionColumn.css('width', '80%');
+                descriptionColumn.css({width: '75%', borderWidth: '6px', borderLeftStyle: 'double', borderColor: 'black'});
                 let descriptionPlaceholder = $('<textarea>');
                 descriptionPlaceholder.addClass('description');
                 descriptionColumn.append(descriptionPlaceholder);
@@ -74,8 +84,12 @@ $(document).ready(function() {
                 saveButton.addClass('saveBtn fa fa-save i:hover');
                 buttonColumn.append(saveButton);              
                 timeBlock.append(buttonColumn);
-                
-                //timeBlock.css('background-color: pink, border: solid, border-color: blue');
+            });
+
+            schedulePlaceholder.on('click', function(event){
+                let currentButton = $(event.target);
+                let editedHour = currentButton.val();
+                console.log(`currentButton has value of ${editedHour}`);    
             });
         };
 

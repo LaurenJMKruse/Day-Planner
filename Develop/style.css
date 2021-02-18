@@ -1,6 +1,6 @@
 /* Applied */
 body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Eagle Lake', cursive;  
   font-size: 16px;
   line-height: 1;
 }
@@ -8,10 +8,10 @@ body {
 /* Applied */
 textarea {
   background: transparent;
-  border: none;
   resize: none;
+  border: none;
+  outline: none;
   color: #000000;
-  border-left: 1px solid black;
   padding: 10px;
 }
 
@@ -21,7 +21,8 @@ textarea {
   min-Height: 100%;
   margin: 0;
   padding: 0;
-  background-image: url(../Assets/Landscape.jpg); background-size: cover;
+  background-image: url(../Assets/Spring-Play.jpg);
+  background-size: cover;
   background-repeat: no-repeat;
   background-position: center center;
   background-attachment: fixed;
@@ -32,16 +33,19 @@ textarea {
 .jumbotron {
   text-align: center;
   background-color: transparent;
+  font-family: 'Meddon', cursive;
   color: black;
   border-radius: 0;
+  padding-bottom: 20px;
   border-bottom: 10px solid black;
 }
 
 /* Image Placeholder */
 .schedule-details {
   border: none;
-  margin: 0;
-  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  width: 75%;
   padding: 0;
 }
 
@@ -51,7 +55,6 @@ textarea {
 /* Applied */
 .time-block{
   text-align: left;
-  border-radius: 15px;
   width: 100%;
 }
 
@@ -60,7 +63,15 @@ textarea {
   white-space: pre-wrap;
   height: 80px;
   width: 100%;
-  border-top: 1px solid white;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+  border-left: 10px solid black;
+  border-right: none;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+  border-bottom-left-radius: 40px;
+  border-bottom-right-radius: 40px;
+  background-color: rgba(121, 90, 59, 0.6);
   margin-left: auto;
   margin-right: auto;
 }
@@ -68,11 +79,10 @@ textarea {
 /* Applied */
 .hour {
   color: #000000;
-  border-top: 1px dashed #000000;
   width: 100%;
   margin-bottom: 0px;
-  padding-left: 5px;
-  padding-top: 10px;
+  padding-left: 20px;
+  padding-top: 20px;
 }
 
 /* Applied */
@@ -86,6 +96,7 @@ textarea {
 .saveBtn {
   border: none;
   background-color: transparent;
+  font-size: 30px;
   color: black;
   height: 80px;
   width: 100%;
