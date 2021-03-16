@@ -1,26 +1,7 @@
-/* Applied */
 body {
-  font-family: 'Eagle Lake', cursive;  
+  font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 1;
-}
-
-/* Applied */
-textarea {
-  background: transparent;
-  resize: none;
-  border: none;
-  outline: none;
-  color: #000000;
-  padding: 10px;
-}
-
-/* Applied? */
-.full-page {
-  background-color: brown;
-  min-Height: 100%;
-  margin: 0;
-  padding: 0;
   background-image: url(./Spring-Play.jpg);
   background-size: cover;
   background-repeat: no-repeat;
@@ -29,100 +10,76 @@ textarea {
   border: none;
 }
 
-/* Applied */
+textarea {
+  background: transparent;
+  border: none;
+  resize: none;
+  color: #000000;
+  border-left: 1px solid black;
+  padding: 10px;
+}
+
 .jumbotron {
   text-align: center;
   background-color: transparent;
   font-family: 'Meddon', cursive;
   color: black;
   border-radius: 0;
-  padding-bottom: 20px;
   border-bottom: 10px solid black;
 }
 
-/* Image Placeholder */
-.schedule-details {
-  border: none;
-  margin-left: auto;
-  margin-right: auto;
-  width: 75%;
-  padding: 0;
+.description{
+  white-space: pre-wrap;
+  padding-Top: 5px;
 }
 
-/**************************
-/* Time Block
-
-/* Applied */
 .time-block{
-  text-align: left;
-  width: 100%;
+  text-align: center;
+  border-radius: 15px;
+  font-family: 'Eagle Lake', cursive;
+  font-size: 16px;
+  line-height: 1;
 }
 
-/* Applied */
 .row {
   white-space: pre-wrap;
   height: 80px;
-  width: 100%;
-  border-top: 1px solid black;
-  border-bottom: 1px solid black;
-  border-left: 10px solid black;
-  border-right: none;
-  border-top-left-radius: 40px;
-  border-top-right-radius: 40px;
-  border-bottom-left-radius: 40px;
-  border-bottom-right-radius: 40px;
-  background-color: rgba(121, 90, 59, 0.6);
-  margin-left: auto;
-  margin-right: auto;
+  border-top: 1px solid white;;
 }
 
-/* Applied */
 .hour {
-  color: #000000;
-  width: 100%;
-  margin-bottom: 0px;
-  padding-left: 20px;
-  padding-top: 20px;
-}
-
-/* Applied */
-.description{
-  white-space: pre-wrap;
-  width: 100%;
-  height: 70px;
-}
-
-/* Will not apply ??? */
-.saveBtn {
-  border: none;
   background-color: transparent;
-  font-size: 30px;
-  color: black;
-  height: 80px;
-  width: 100%;
+  color: #000000;
+  border-top: 1px dashed #000000;
+  text-align: left;
+  padding-top: 5px;
 }
-
-/* How do I apply? */
-.saveBtn i:hover {
-  font-size: 25px;
-  transition: all .3s ease-in-out;
-}
-
-
 
 .past {
-  background-color: #d3d3d3;
+  background-color: rgba(96, 213, 243, 0.36);
   color: white;
 }
 
 .present {
-  background-color: #ff6961;
-  color: white;
+  background-color: transparent;
+  color: black;
 }
 
 .future {
-  background-color: #77dd77;
-  color: white;
+  background-color: rgba(131, 53, 143, 0.36);
+  color: black;
 }
 
+.saveBtn {
+  border-left: 1px solid black;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+  font-size: 25px;
+  background-color: transparent;
+  color: black;
+}
 
+.saveBtn i:hover {
+  font-size: 40px;
+  transition: all .3s ease-in-out;
+}
